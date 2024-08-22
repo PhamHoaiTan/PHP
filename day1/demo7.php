@@ -1,21 +1,3 @@
-<?php
-    // Lấy thông tin từ form với method get
-    if(isset($_POST["username"]))
-    {
-        $username = $_POST["username"];
-        $password = $_POST["password"];
-        if($username == "aptech" && $password == "123")
-        {
-            echo "Login thành công";
-        }
-        else
-        {
-            echo "Login false";
-        }
-    }
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +9,7 @@
     <!-- Phải có biến name cho input -->
     <!-- Method: get sẽ đưa lên thanh địa chỉ (default)-->
      <!-- Method:post sẽ kh đưa lên  -->
-    <form Method="post">
+    <form action="./processDemo7.php" Method="post">
         <h1>Form</h1>
         username : <input type="text" name="username"><br>
         password <input type="password" name="password">
