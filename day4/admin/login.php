@@ -1,5 +1,7 @@
 <?php
+session_start();
 require_once("../connectDB.php");
+// Dat 
 if (isset($_POST["username"]) && isset( $_POST["password"]))
 {
     $username = $_POST["username"];
@@ -11,8 +13,10 @@ if (isset($_POST["username"]) && isset( $_POST["password"]))
         $error = "Login fail";
     }
     else
-    {
-        header("Location: index.php");
+    {   
+        // dat session
+        $_SESSION["username"] = $users[0]["username"];
+        header("location: index.php");
     }
 }
 ?>
