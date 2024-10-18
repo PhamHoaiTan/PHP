@@ -18,7 +18,7 @@ $products = $conn->query($sql);
 <body>
     <div class="container mt-3">
         <h2>PRODUCT LIST</h2>
-        <a href="./create_product.php">Create product</a>
+        <a href="./create_product.php" class="btn">Create product</a>
         <table class="table table-dark">
             <thead>
                 <tr>
@@ -36,7 +36,7 @@ $products = $conn->query($sql);
                             <td><?php echo $item['name'] ?></td>
                             <td><?php echo $item['price'] ?></td>
                             <td><?php echo $item['description'] ?></td>
-                            <td><?php echo $item['image'] ?></td>
+                            <td><img src="<?php echo $item['image'] ?>" alt="" width="100px" class="img-thumbnail"></td>
                         </tr>
                 <?php
                     }
